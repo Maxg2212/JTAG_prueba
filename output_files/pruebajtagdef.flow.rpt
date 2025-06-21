@@ -1,5 +1,5 @@
 Flow report for pruebajtagdef
-Sat Jun 21 12:39:59 2025
+Sat Jun 21 14:18:40 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Jun 21 12:39:59 2025       ;
+; Flow Status                     ; Successful - Sat Jun 21 14:18:40 2025       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; pruebajtagdef                               ;
 ; Top-level Entity Name           ; top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 86 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 162                                         ;
-; Total pins                      ; 107 / 457 ( 23 % )                          ;
+; Logic utilization (in ALMs)     ; 82 / 32,070 ( < 1 % )                       ;
+; Total registers                 ; 161                                         ;
+; Total pins                      ; 64 / 457 ( 14 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
@@ -68,7 +68,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/21/2025 12:38:39 ;
+; Start date & time ; 06/21/2025 14:17:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; pruebajtagdef       ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+-----------------------------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                     ; Value                                                     ; Default Value ; Entity Name ; Section Id                        ;
 +-------------------------------------+-----------------------------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID               ; 247202825517351.175053111908668                           ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID               ; 1096770795724.175053702107464                             ; --            ; --          ; --                                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                       ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                       ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; Off                                                       ; --            ; --          ; eda_board_design_signal_integrity ;
@@ -91,6 +91,7 @@ https://fpgasoftware.intel.com/eula.
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                         ; --            ; --          ; --                                ;
 ; MISC_FILE                           ; u_vjtag/synthesis/../u_vjtag.cmp                          ; --            ; --          ; --                                ;
 ; MISC_FILE                           ; u_vjtag/synthesis/../../u_vjtag.qsys                      ; --            ; --          ; --                                ;
+; MISC_FILE                           ; ram1_bb.v                                                 ; --            ; --          ; --                                ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family)                    ; --            ; top         ; Top                               ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                    ; --            ; top         ; Top                               ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                    ; --            ; top         ; Top                               ;
@@ -110,26 +111,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 506 MB              ; 00:00:48                           ;
-; Fitter               ; 00:00:42     ; 1.0                     ; 1854 MB             ; 00:01:20                           ;
-; Assembler            ; 00:00:06     ; 1.0                     ; 505 MB              ; 00:00:07                           ;
-; Timing Analyzer      ; 00:00:06     ; 1.1                     ; 829 MB              ; 00:00:07                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 681 MB              ; 00:00:02                           ;
-; Total                ; 00:01:15     ; --                      ; --                  ; 00:02:24                           ;
+; Analysis & Synthesis ; 00:00:33     ; 1.0                     ; 4899 MB             ; 00:01:10                           ;
+; Fitter               ; 00:00:46     ; 1.0                     ; 6630 MB             ; 00:01:33                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4848 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:06     ; 1.1                     ; 5157 MB             ; 00:00:07                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4731 MB             ; 00:00:02                           ;
+; Total                ; 00:01:34     ; --                      ; --                  ; 00:02:59                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                                          ;
-+----------------------+------------------------------------+----------------+------------+----------------+
-; Module Name          ; Machine Hostname                   ; OS Name        ; OS Version ; Processor type ;
-+----------------------+------------------------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; max-garro-HP-ENVY-Laptop-17-cg0xxx ; Ubuntu 24.04.2 ; 24         ; x86_64         ;
-; Fitter               ; max-garro-HP-ENVY-Laptop-17-cg0xxx ; Ubuntu 24.04.2 ; 24         ; x86_64         ;
-; Assembler            ; max-garro-HP-ENVY-Laptop-17-cg0xxx ; Ubuntu 24.04.2 ; 24         ; x86_64         ;
-; Timing Analyzer      ; max-garro-HP-ENVY-Laptop-17-cg0xxx ; Ubuntu 24.04.2 ; 24         ; x86_64         ;
-; EDA Netlist Writer   ; max-garro-HP-ENVY-Laptop-17-cg0xxx ; Ubuntu 24.04.2 ; 24         ; x86_64         ;
-+----------------------+------------------------------------+----------------+------------+----------------+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; LAPTOP-85GS8ERK  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; LAPTOP-85GS8ERK  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; LAPTOP-85GS8ERK  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; LAPTOP-85GS8ERK  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; LAPTOP-85GS8ERK  ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
 
 
 ------------

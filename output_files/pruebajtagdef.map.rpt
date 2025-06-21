@@ -1,5 +1,5 @@
 Analysis & Synthesis report for pruebajtagdef
-Sat Jun 21 12:38:58 2025
+Sat Jun 21 14:17:35 2025
 Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
@@ -17,14 +17,19 @@ Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
   9. General Register Statistics
  10. Inverted Register Statistics
  11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0
- 13. Parameter Settings for User Entity Instance: vjtag_interface:u_vjtag_interface
- 14. Port Connectivity Checks: "vjtag_interface:u_vjtag_interface"
- 15. Port Connectivity Checks: "u_vjtag:vjtag"
- 16. Virtual JTAG Settings
- 17. Post-Synthesis Netlist Statistics for Top Partition
- 18. Elapsed Time Per Partition
- 19. Analysis & Synthesis Messages
+ 12. Source assignments for ram1:RAM_inst|altsyncram:altsyncram_component|altsyncram_b9m1:auto_generated
+ 13. Parameter Settings for User Entity Instance: u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0
+ 14. Parameter Settings for User Entity Instance: vjtag_interface:u_vjtag_interface
+ 15. Parameter Settings for User Entity Instance: ram1:RAM_inst|altsyncram:altsyncram_component
+ 16. altsyncram Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "ram1:RAM_inst"
+ 18. Port Connectivity Checks: "vjtag_interface:u_vjtag_interface"
+ 19. Port Connectivity Checks: "u_vjtag:vjtag"
+ 20. Virtual JTAG Settings
+ 21. Post-Synthesis Netlist Statistics for Top Partition
+ 22. Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -51,14 +56,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Jun 21 12:38:58 2025       ;
+; Analysis & Synthesis Status     ; Successful - Sat Jun 21 14:17:35 2025       ;
 ; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
 ; Revision Name                   ; pruebajtagdef                               ;
 ; Top-level Entity Name           ; top                                         ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
 ; Total registers                 ; 157                                         ;
-; Total pins                      ; 107                                         ;
+; Total pins                      ; 64                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -176,28 +181,39 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+--------------------------------------------------------------------------------------------------------+-------------+
-; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                           ; Library     ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+--------------------------------------------------------------------------------------------------------+-------------+
-; u_vjtag/synthesis/u_vjtag.v                                        ; yes             ; User Verilog HDL File                        ; /home/max-garro/Documents/PruebaDef/u_vjtag/synthesis/u_vjtag.v                                        ;             ;
-; top.sv                                                             ; yes             ; User SystemVerilog HDL File                  ; /home/max-garro/Documents/PruebaDef/top.sv                                                             ;             ;
-; vjtag_interface.sv                                                 ; yes             ; User SystemVerilog HDL File                  ; /home/max-garro/Documents/PruebaDef/vjtag_interface.sv                                                 ;             ;
-; sld_virtual_jtag.v                                                 ; yes             ; Megafunction                                 ; /home/max-garro/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag.v                 ;             ;
-; sld_virtual_jtag_basic.v                                           ; yes             ; Megafunction                                 ; /home/max-garro/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v           ;             ;
-; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; /home/max-garro/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd      ;             ;
-; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; /home/max-garro/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv  ;             ;
-; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; /home/max-garro/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                        ; altera_sld  ;
-; db/ip/sld52af7be6/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/max-garro/Documents/PruebaDef/db/ip/sld52af7be6/alt_sld_fab.v                                    ; alt_sld_fab ;
-; db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; /home/max-garro/Documents/PruebaDef/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
-; db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; /home/max-garro/Documents/PruebaDef/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
-; db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/max-garro/Documents/PruebaDef/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
-; db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; /home/max-garro/Documents/PruebaDef/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
-; db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; /home/max-garro/Documents/PruebaDef/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
-; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; /home/max-garro/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                   ;             ;
-; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; /home/max-garro/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                     ;             ;
-+--------------------------------------------------------------------+-----------------+----------------------------------------------+--------------------------------------------------------------------------------------------------------+-------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                                      ; Library     ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------+-------------+
+; u_vjtag/synthesis/u_vjtag.v                                        ; yes             ; User Verilog HDL File                        ; C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/u_vjtag/synthesis/u_vjtag.v                                        ;             ;
+; top.sv                                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv                                                             ;             ;
+; vjtag_interface.sv                                                 ; yes             ; User SystemVerilog HDL File                  ; C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/vjtag_interface.sv                                                 ;             ;
+; ram1.v                                                             ; yes             ; User Wizard-Generated File                   ; C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/ram1.v                                                             ;             ;
+; sld_virtual_jtag.v                                                 ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag.v                                         ;             ;
+; sld_virtual_jtag_basic.v                                           ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v                                   ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd                              ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv                          ;             ;
+; altsyncram.tdf                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf                                             ;             ;
+; stratix_ram_block.inc                                              ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                      ;             ;
+; lpm_mux.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_mux.inc                                                ;             ;
+; lpm_decode.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/lpm_decode.inc                                             ;             ;
+; aglobal201.inc                                                     ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/aglobal201.inc                                             ;             ;
+; a_rdenreg.inc                                                      ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/a_rdenreg.inc                                              ;             ;
+; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altrom.inc                                                 ;             ;
+; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altram.inc                                                 ;             ;
+; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altdpram.inc                                               ;             ;
+; db/altsyncram_b9m1.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/altsyncram_b9m1.tdf                                             ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_hub.vhd                                                ; altera_sld  ;
+; db/ip/sld52af7be6/alt_sld_fab.v                                    ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/ip/sld52af7be6/alt_sld_fab.v                                    ; alt_sld_fab ;
+; db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Auto-Found Verilog HDL File        ; C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab.v             ; alt_sld_fab ;
+; db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File            ; C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; alt_sld_fab ;
+; db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; alt_sld_fab ;
+; db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Auto-Found VHDL File               ; C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; alt_sld_fab ;
+; db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Auto-Found SystemVerilog HDL File  ; C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_hub.vhd                                           ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_rom_sr.vhd                                             ;             ;
++--------------------------------------------------------------------+-----------------+----------------------------------------------+-------------------------------------------------------------------------------------------------------------------+-------------+
 
 
 +------------------------------------------------------------------------+
@@ -216,14 +232,14 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                          ;
 ; Dedicated logic registers                   ; 157                      ;
 ;                                             ;                          ;
-; I/O pins                                    ; 107                      ;
+; I/O pins                                    ; 64                       ;
 ;                                             ;                          ;
 ; Total DSP Blocks                            ; 0                        ;
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 149                      ;
-; Total fan-out                               ; 1150                     ;
-; Average fan-out                             ; 2.24                     ;
+; Total fan-out                               ; 1091                     ;
+; Average fan-out                             ; 2.65                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -232,7 +248,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                             ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |top                                                                                                                                    ; 118 (19)            ; 157 (32)                  ; 0                 ; 0          ; 107  ; 0            ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
+; |top                                                                                                                                    ; 118 (19)            ; 157 (32)                  ; 0                 ; 0          ; 64   ; 0            ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 92 (1)              ; 76 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |top|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 91 (0)              ; 76 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 91 (0)              ; 76 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -254,6 +270,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 ; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                                                                                                                                                                                                          ; IP Include File ;
 +--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Altera ; RAM: 1-PORT  ; 20.1    ; N/A          ; N/A          ; |top|ram1:RAM_inst                                                                                                                                                                                                                                                       ; ram1.v          ;
 ; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                 ;                 ;
 ; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                             ;                 ;
 ; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_presplit:presplit   ;                 ;
@@ -288,14 +305,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top|vjtag_interface:u_vjtag_interface|DR2[8] ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top|counter[14]                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                                                                                                                                                                                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                                                                                                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top|vjtag_interface:u_vjtag_interface|DR2[8]                                                                                                                                                                                                                                                                                                                 ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |top|counter[0]                                                                                                                                                                                                                                                                                                                                               ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|irsr_reg[1]                             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[0]                    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|hub_minor_ver_reg[1]                    ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|mixer_addr_reg_internal[0]              ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|word_counter[0] ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 64 LEs               ; 24 LEs                 ; Yes        ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|design_hash_reg[1]                      ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 32 LEs               ; 20 LEs                 ; Yes        ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg|WORD_SR[1]      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Source assignments for ram1:RAM_inst|altsyncram:altsyncram_component|altsyncram_b9m1:auto_generated ;
++---------------------------------+--------------------+------+---------------------------------------+
+; Assignment                      ; Value              ; From ; To                                    ;
++---------------------------------+--------------------+------+---------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                     ;
++---------------------------------+--------------------+------+---------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------+
@@ -323,6 +356,100 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; DW             ; 16    ; Signed Integer                                        ;
 +----------------+-------+-------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ram1:RAM_inst|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+--------------------------------+
+; Parameter Name                     ; Value                ; Type                           ;
++------------------------------------+----------------------+--------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                        ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                   ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                 ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                        ;
+; OPERATION_MODE                     ; SINGLE_PORT          ; Untyped                        ;
+; WIDTH_A                            ; 8                    ; Signed Integer                 ;
+; WIDTHAD_A                          ; 8                    ; Signed Integer                 ;
+; NUMWORDS_A                         ; 256                  ; Signed Integer                 ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                        ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                        ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                        ;
+; WIDTH_B                            ; 1                    ; Untyped                        ;
+; WIDTHAD_B                          ; 1                    ; Untyped                        ;
+; NUMWORDS_B                         ; 1                    ; Untyped                        ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                        ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                        ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                        ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                        ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                        ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                        ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                        ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                        ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                        ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                 ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                        ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                        ;
+; BYTE_SIZE                          ; 8                    ; Untyped                        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                        ;
+; INIT_FILE                          ; UNUSED               ; Untyped                        ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                        ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                        ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                        ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                        ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                        ;
+; CBXI_PARAMETER                     ; altsyncram_b9m1      ; Untyped                        ;
++------------------------------------+----------------------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                          ;
++-------------------------------------------+-----------------------------------------------+
+; Name                                      ; Value                                         ;
++-------------------------------------------+-----------------------------------------------+
+; Number of entity instances                ; 1                                             ;
+; Entity Instance                           ; ram1:RAM_inst|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                   ;
+;     -- WIDTH_A                            ; 8                                             ;
+;     -- NUMWORDS_A                         ; 256                                           ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                        ;
+;     -- WIDTH_B                            ; 1                                             ;
+;     -- NUMWORDS_B                         ; 1                                             ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                        ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                  ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                          ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                     ;
++-------------------------------------------+-----------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ram1:RAM_inst"                                                                                                                                     ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                         ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+; address ; Input  ; Warning  ; Input port expression (6 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "address[7..6]" will be connected to GND. ;
+; data    ; Input  ; Info     ; Stuck at GND                                                                                                                                    ;
+; rden    ; Input  ; Info     ; Stuck at VCC                                                                                                                                    ;
+; wren    ; Input  ; Info     ; Stuck at GND                                                                                                                                    ;
+; q       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -385,7 +512,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 16                          ;
 ;     ENA CLR           ; 16                          ;
 ;     ENA CLR SLD       ; 32                          ;
-; arriav_io_obuf        ; 16                          ;
 ; arriav_lcell_comb     ; 25                          ;
 ;     arith             ; 16                          ;
 ;         1 data inputs ; 1                           ;
@@ -396,20 +522,48 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 1                           ;
 ;         5 data inputs ; 4                           ;
 ;         6 data inputs ; 1                           ;
-; boundary_port         ; 134                         ;
+; boundary_port         ; 91                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.50                        ;
-; Average LUT depth     ; 0.81                        ;
+; Average LUT depth     ; 0.91                        ;
 +-----------------------+-----------------------------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
++------------------------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Partition sld_hub:auto_hub ;
++-----------------------+------------------------------------------+
+; Type                  ; Count                                    ;
++-----------------------+------------------------------------------+
+; arriav_ff             ; 76                                       ;
+;     CLR               ; 4                                        ;
+;     ENA               ; 30                                       ;
+;     ENA CLR           ; 19                                       ;
+;     SCLR              ; 7                                        ;
+;     plain             ; 16                                       ;
+; arriav_lcell_comb     ; 92                                       ;
+;     normal            ; 92                                       ;
+;         0 data inputs ; 1                                        ;
+;         1 data inputs ; 4                                        ;
+;         2 data inputs ; 21                                       ;
+;         3 data inputs ; 16                                       ;
+;         4 data inputs ; 13                                       ;
+;         5 data inputs ; 24                                       ;
+;         6 data inputs ; 13                                       ;
+; boundary_port         ; 91                                       ;
+;                       ;                                          ;
+; Max LUT depth         ; 3.00                                     ;
+; Average LUT depth     ; 1.50                                     ;
++-----------------------+------------------------------------------+
+
+
++---------------------------------+
+; Elapsed Time Per Partition      ;
++------------------+--------------+
+; Partition Name   ; Elapsed Time ;
++------------------+--------------+
+; sld_hub:auto_hub ; 00:00:00     ;
+; Top              ; 00:00:00     ;
++------------------+--------------+
 
 
 +-------------------------------+
@@ -418,49 +572,66 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
-    Info: Processing started: Sat Jun 21 12:38:38 2025
+    Info: Processing started: Sat Jun 21 14:17:00 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pruebajtagdef -c pruebajtagdef
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file u_vjtag/synthesis/u_vjtag.v
-    Info (12023): Found entity 1: u_vjtag File: /home/max-garro/Documents/PruebaDef/u_vjtag/synthesis/u_vjtag.v Line: 6
+    Info (12023): Found entity 1: u_vjtag File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/u_vjtag/synthesis/u_vjtag.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file u_vjtag/synthesis/u_vjtag.v
-    Info (12023): Found entity 1: u_vjtag File: /home/max-garro/Documents/PruebaDef/u_vjtag/synthesis/u_vjtag.v Line: 6
+    Info (12023): Found entity 1: u_vjtag File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/u_vjtag/synthesis/u_vjtag.v Line: 6
 Info (12021): Found 1 design units, including 1 entities, in source file top.sv
-    Info (12023): Found entity 1: top File: /home/max-garro/Documents/PruebaDef/top.sv Line: 6
+    Info (12023): Found entity 1: top File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vjtag_interface.sv
-    Info (12023): Found entity 1: vjtag_interface File: /home/max-garro/Documents/PruebaDef/vjtag_interface.sv Line: 1
+    Info (12023): Found entity 1: vjtag_interface File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/vjtag_interface.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file ram1.v
+    Info (12023): Found entity 1: ram1 File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/ram1.v Line: 40
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top.sv(56): object "ready" assigned a value but never read File: /home/max-garro/Documents/PruebaDef/top.sv Line: 56
-Warning (10036): Verilog HDL or VHDL warning at top.sv(58): object "bin_in" assigned a value but never read File: /home/max-garro/Documents/PruebaDef/top.sv Line: 58
-Warning (10036): Verilog HDL or VHDL warning at top.sv(73): object "udr" assigned a value but never read File: /home/max-garro/Documents/PruebaDef/top.sv Line: 73
-Warning (10034): Output port "HEX0" at top.sv(27) has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 27
-Warning (10034): Output port "HEX1" at top.sv(28) has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 28
-Warning (10034): Output port "HEX2" at top.sv(29) has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 29
-Warning (10034): Output port "HEX3" at top.sv(30) has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 30
-Warning (10034): Output port "SRAM_A" at top.sv(37) has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-Warning (10034): Output port "UART_TX" at top.sv(34) has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 34
-Warning (10034): Output port "SRAM_CE_n" at top.sv(38) has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 38
-Warning (10034): Output port "SRAM_LB_n" at top.sv(40) has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 40
-Warning (10034): Output port "SRAM_OE_n" at top.sv(41) has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 41
-Warning (10034): Output port "SRAM_UB_n" at top.sv(42) has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 42
-Warning (10034): Output port "SRAM_WE_n" at top.sv(44) has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 44
-Info (12128): Elaborating entity "u_vjtag" for hierarchy "u_vjtag:vjtag" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 118
-Info (12128): Elaborating entity "sld_virtual_jtag" for hierarchy "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0" File: /home/max-garro/Documents/PruebaDef/u_vjtag/synthesis/u_vjtag.v Line: 74
-Info (12130): Elaborated megafunction instantiation "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0" File: /home/max-garro/Documents/PruebaDef/u_vjtag/synthesis/u_vjtag.v Line: 74
-Info (12133): Instantiated megafunction "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0" with the following parameter: File: /home/max-garro/Documents/PruebaDef/u_vjtag/synthesis/u_vjtag.v Line: 74
+Warning (10036): Verilog HDL or VHDL warning at top.sv(23): object "ready" assigned a value but never read File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 23
+Warning (10230): Verilog HDL assignment warning at top.sv(90): truncated value with size 32 to match size of target (16) File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 90
+Warning (10230): Verilog HDL assignment warning at top.sv(92): truncated value with size 32 to match size of target (16) File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 92
+Warning (10034): Output port "HEX0" at top.sv(8) has no driver File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 8
+Warning (10034): Output port "HEX1" at top.sv(9) has no driver File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 9
+Warning (10034): Output port "HEX2" at top.sv(10) has no driver File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 10
+Warning (10034): Output port "HEX3" at top.sv(11) has no driver File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 11
+Warning (10034): Output port "UART_TX" at top.sv(14) has no driver File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 14
+Info (12128): Elaborating entity "u_vjtag" for hierarchy "u_vjtag:vjtag" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 44
+Info (12128): Elaborating entity "sld_virtual_jtag" for hierarchy "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/u_vjtag/synthesis/u_vjtag.v Line: 74
+Info (12130): Elaborated megafunction instantiation "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/u_vjtag/synthesis/u_vjtag.v Line: 74
+Info (12133): Instantiated megafunction "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0" with the following parameter: File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/u_vjtag/synthesis/u_vjtag.v Line: 74
     Info (12134): Parameter "sld_auto_instance_index" = "YES"
     Info (12134): Parameter "sld_instance_index" = "0"
     Info (12134): Parameter "sld_ir_width" = "2"
-Info (12128): Elaborating entity "sld_virtual_jtag_basic" for hierarchy "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst" File: /home/max-garro/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag.v Line: 152
-Info (12131): Elaborated megafunction instantiation "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst", which is child of megafunction instantiation "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0" File: /home/max-garro/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag.v Line: 152
-Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst" File: /home/max-garro/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152
-Info (12131): Elaborated megafunction instantiation "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0" File: /home/max-garro/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152
-Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: /home/max-garro/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 415
-Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: /home/max-garro/intelFPGA_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
-Info (12128): Elaborating entity "vjtag_interface" for hierarchy "vjtag_interface:u_vjtag_interface" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 133
+Info (12128): Elaborating entity "sld_virtual_jtag_basic" for hierarchy "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag.v Line: 152
+Info (12131): Elaborated megafunction instantiation "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst", which is child of megafunction instantiation "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag.v Line: 152
+Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152
+Info (12131): Elaborated megafunction instantiation "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 415
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "u_vjtag:vjtag|sld_virtual_jtag:virtual_jtag_0|sld_virtual_jtag_basic:sld_virtual_jtag_basic_inst|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 232
+Info (12128): Elaborating entity "vjtag_interface" for hierarchy "vjtag_interface:u_vjtag_interface" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 59
+Info (12128): Elaborating entity "ram1" for hierarchy "ram1:RAM_inst" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 74
+Info (12128): Elaborating entity "altsyncram" for hierarchy "ram1:RAM_inst|altsyncram:altsyncram_component" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/ram1.v Line: 89
+Info (12130): Elaborated megafunction instantiation "ram1:RAM_inst|altsyncram:altsyncram_component" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/ram1.v Line: 89
+Info (12133): Instantiated megafunction "ram1:RAM_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/ram1.v Line: 89
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_NO_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_b9m1.tdf
+    Info (12023): Found entity 1: altsyncram_b9m1 File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/altsyncram_b9m1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_b9m1" for hierarchy "ram1:RAM_inst|altsyncram:altsyncram_component|altsyncram_b9m1:auto_generated" File: c:/intelfpga_lite/20.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2025.06.21.12:38:50 Progress: Loading sld52af7be6/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2025.06.21.14:17:21 Progress: Loading sld52af7be6/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -471,118 +642,84 @@ Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification
 Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
 Info (11171): Finished IP generation for the debug fabric: alt_sld_fab.
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld52af7be6/alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab File: /home/max-garro/Documents/PruebaDef/db/ip/sld52af7be6/alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/ip/sld52af7be6/alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab.v
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: /home/max-garro/Documents/PruebaDef/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_ident.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: /home/max-garro/Documents/PruebaDef/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: /home/max-garro/Documents/PruebaDef/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
 Info (12021): Found 2 design units, including 1 entities, in source file db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
-    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: /home/max-garro/Documents/PruebaDef/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: /home/max-garro/Documents/PruebaDef/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 102
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
-    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: /home/max-garro/Documents/PruebaDef/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13039): The following bidirectional pins have no drivers
-    Warning (13040): bidirectional pin "SRAM_D[0]" has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 39
-    Warning (13040): bidirectional pin "SRAM_D[1]" has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 39
-    Warning (13040): bidirectional pin "SRAM_D[2]" has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 39
-    Warning (13040): bidirectional pin "SRAM_D[3]" has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 39
-    Warning (13040): bidirectional pin "SRAM_D[4]" has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 39
-    Warning (13040): bidirectional pin "SRAM_D[5]" has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 39
-    Warning (13040): bidirectional pin "SRAM_D[6]" has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 39
-    Warning (13040): bidirectional pin "SRAM_D[7]" has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 39
-    Warning (13040): bidirectional pin "SRAM_D[8]" has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 39
-    Warning (13040): bidirectional pin "SRAM_D[9]" has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 39
-    Warning (13040): bidirectional pin "SRAM_D[10]" has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 39
-    Warning (13040): bidirectional pin "SRAM_D[11]" has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 39
-    Warning (13040): bidirectional pin "SRAM_D[12]" has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 39
-    Warning (13040): bidirectional pin "SRAM_D[13]" has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 39
-    Warning (13040): bidirectional pin "SRAM_D[14]" has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 39
-    Warning (13040): bidirectional pin "SRAM_D[15]" has no driver File: /home/max-garro/Documents/PruebaDef/top.sv Line: 39
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/ip/sld52af7be6/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "ram1:RAM_inst|altsyncram:altsyncram_component|altsyncram_b9m1:auto_generated|q_a[0]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/altsyncram_b9m1.tdf Line: 38
+        Warning (14320): Synthesized away node "ram1:RAM_inst|altsyncram:altsyncram_component|altsyncram_b9m1:auto_generated|q_a[1]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/altsyncram_b9m1.tdf Line: 61
+        Warning (14320): Synthesized away node "ram1:RAM_inst|altsyncram:altsyncram_component|altsyncram_b9m1:auto_generated|q_a[2]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/altsyncram_b9m1.tdf Line: 84
+        Warning (14320): Synthesized away node "ram1:RAM_inst|altsyncram:altsyncram_component|altsyncram_b9m1:auto_generated|q_a[3]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/altsyncram_b9m1.tdf Line: 107
+        Warning (14320): Synthesized away node "ram1:RAM_inst|altsyncram:altsyncram_component|altsyncram_b9m1:auto_generated|q_a[4]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/altsyncram_b9m1.tdf Line: 130
+        Warning (14320): Synthesized away node "ram1:RAM_inst|altsyncram:altsyncram_component|altsyncram_b9m1:auto_generated|q_a[5]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/altsyncram_b9m1.tdf Line: 153
+        Warning (14320): Synthesized away node "ram1:RAM_inst|altsyncram:altsyncram_component|altsyncram_b9m1:auto_generated|q_a[6]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/altsyncram_b9m1.tdf Line: 176
+        Warning (14320): Synthesized away node "ram1:RAM_inst|altsyncram:altsyncram_component|altsyncram_b9m1:auto_generated|q_a[7]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/db/altsyncram_b9m1.tdf Line: 199
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX0[0]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 27
-    Warning (13410): Pin "HEX0[1]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 27
-    Warning (13410): Pin "HEX0[2]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 27
-    Warning (13410): Pin "HEX0[3]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 27
-    Warning (13410): Pin "HEX0[4]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 27
-    Warning (13410): Pin "HEX0[5]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 27
-    Warning (13410): Pin "HEX0[6]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 27
-    Warning (13410): Pin "HEX1[0]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 28
-    Warning (13410): Pin "HEX1[1]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 28
-    Warning (13410): Pin "HEX1[2]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 28
-    Warning (13410): Pin "HEX1[3]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 28
-    Warning (13410): Pin "HEX1[4]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 28
-    Warning (13410): Pin "HEX1[5]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 28
-    Warning (13410): Pin "HEX1[6]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 28
-    Warning (13410): Pin "HEX2[0]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 29
-    Warning (13410): Pin "HEX2[1]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 29
-    Warning (13410): Pin "HEX2[2]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 29
-    Warning (13410): Pin "HEX2[3]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 29
-    Warning (13410): Pin "HEX2[4]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 29
-    Warning (13410): Pin "HEX2[5]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 29
-    Warning (13410): Pin "HEX2[6]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 29
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 30
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 30
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 30
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 30
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 30
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 30
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 30
-    Warning (13410): Pin "UART_TX" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 34
-    Warning (13410): Pin "SRAM_A[0]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[1]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[2]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[3]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[4]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[5]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[6]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[7]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[8]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[9]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[10]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[11]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[12]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[13]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[14]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[15]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[16]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_A[17]" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 37
-    Warning (13410): Pin "SRAM_CE_n" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 38
-    Warning (13410): Pin "SRAM_LB_n" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 40
-    Warning (13410): Pin "SRAM_OE_n" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 41
-    Warning (13410): Pin "SRAM_UB_n" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 42
-    Warning (13410): Pin "SRAM_WE_n" is stuck at GND File: /home/max-garro/Documents/PruebaDef/top.sv Line: 44
+    Warning (13410): Pin "HEX0[0]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 8
+    Warning (13410): Pin "HEX0[1]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 8
+    Warning (13410): Pin "HEX0[2]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 8
+    Warning (13410): Pin "HEX0[3]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 8
+    Warning (13410): Pin "HEX0[4]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 8
+    Warning (13410): Pin "HEX0[5]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 8
+    Warning (13410): Pin "HEX0[6]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 8
+    Warning (13410): Pin "HEX1[0]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 9
+    Warning (13410): Pin "HEX1[1]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 9
+    Warning (13410): Pin "HEX1[2]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 9
+    Warning (13410): Pin "HEX1[3]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 9
+    Warning (13410): Pin "HEX1[4]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 9
+    Warning (13410): Pin "HEX1[5]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 9
+    Warning (13410): Pin "HEX1[6]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 9
+    Warning (13410): Pin "HEX2[0]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 10
+    Warning (13410): Pin "HEX2[1]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 10
+    Warning (13410): Pin "HEX2[2]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 10
+    Warning (13410): Pin "HEX2[3]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 10
+    Warning (13410): Pin "HEX2[4]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 10
+    Warning (13410): Pin "HEX2[5]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 10
+    Warning (13410): Pin "HEX2[6]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 10
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 11
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 11
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 11
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 11
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 11
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 11
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 11
+    Warning (13410): Pin "UART_TX" is stuck at GND File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 14
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
+Info (286031): Timing-Driven Synthesis is running on partition "sld_hub:auto_hub"
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 9 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 16 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_125_p" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 9
-    Warning (15610): No output dependent on input pin "CLOCK_50_B6A" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 11
-    Warning (15610): No output dependent on input pin "CLOCK_50_B7A" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 12
-    Warning (15610): No output dependent on input pin "CLOCK_50_B8A" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 13
-    Warning (15610): No output dependent on input pin "KEY[3]" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 21
-    Warning (15610): No output dependent on input pin "SW[0]" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 24
-    Warning (15610): No output dependent on input pin "SW[1]" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 24
-    Warning (15610): No output dependent on input pin "SW[2]" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 24
-    Warning (15610): No output dependent on input pin "SW[3]" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 24
-    Warning (15610): No output dependent on input pin "SW[4]" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 24
-    Warning (15610): No output dependent on input pin "SW[5]" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 24
-    Warning (15610): No output dependent on input pin "SW[6]" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 24
-    Warning (15610): No output dependent on input pin "SW[7]" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 24
-    Warning (15610): No output dependent on input pin "SW[8]" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 24
-    Warning (15610): No output dependent on input pin "SW[9]" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 24
-    Warning (15610): No output dependent on input pin "UART_RX" File: /home/max-garro/Documents/PruebaDef/top.sv Line: 33
-Info (21057): Implemented 315 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 24 input pins
-    Info (21059): Implemented 71 output pins
-    Info (21060): Implemented 16 bidirectional pins
+Warning (21074): Design contains 12 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 4
+    Warning (15610): No output dependent on input pin "SW[0]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[1]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[2]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[3]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[4]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[5]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 5
+    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 5
+    Warning (15610): No output dependent on input pin "UART_RX" File: C:/Users/maxga/OneDrive/Documentos/JTAG_prueba/top.sv Line: 12
+Info (21057): Implemented 272 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
+    Info (21059): Implemented 48 output pins
     Info (21061): Implemented 203 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 103 warnings
-    Info: Peak virtual memory: 513 megabytes
-    Info: Processing ended: Sat Jun 21 12:38:58 2025
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:49
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 63 warnings
+    Info: Peak virtual memory: 4899 megabytes
+    Info: Processing ended: Sat Jun 21 14:17:35 2025
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:01:11
 
 
